@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CmpImage"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".CmpImage" />
         <activity android:name=".ImageFetch" />
         <activity android:name=".Feedback" />
         <activity android:name=".Complaint" />
@@ -21,7 +22,7 @@
         <activity android:name=".ListComplaints" />
         <activity android:name=".DummyActivity" />
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
