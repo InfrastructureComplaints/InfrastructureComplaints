@@ -11,20 +11,23 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+import com.google.android.material.textview.MaterialTextView;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
     private SharedPrefrencesConfig prefrencesConfig;
-    EditText text_email;
-    EditText text_password;
+    TextInputEditText text_email;
+    TextInputEditText text_password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         prefrencesConfig = new SharedPrefrencesConfig(getApplicationContext());
-        text_email = (EditText) findViewById(R.id.text_email);
-        text_password = (EditText) findViewById(R.id.text_newpassword);
+        text_email =  findViewById(R.id.text_email);
+        text_password =  findViewById(R.id.text_password);
 
         if(prefrencesConfig.readLoginStatus()) {
                 startActivity(new Intent(this,ListComplaints.class));
