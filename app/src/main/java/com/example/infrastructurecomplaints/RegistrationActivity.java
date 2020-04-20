@@ -36,17 +36,30 @@ public class RegistrationActivity extends AppCompatActivity {
         String dob = text_dob.getText().toString();
         String contact = text_contact.getText().toString();
 
+        int i=0;
+        if (text_email.getText().toString().length() != 0) {
+            String UEmail = text_email.getText().toString();
+            String str = UEmail.split("@")[0];
+            if (UEmail.split("@")[1].equals("nitc.ac.in")) {
+                email = UEmail;
+                i=1;
+            } else {
+                text_email.setError("Enter valid email");
+                text_email.requestFocus();
+            }
+        }
         if (text_name.getText().toString().isEmpty() || text_name.getText().toString().length() > 32) {
             text_name.setError("Enter valid name:max length 32");
             text_name.requestFocus();
         } else if (text_email.getText().toString().length() == 0) {
             text_email.setError("Enter valid email");
             text_email.requestFocus();
-
+        }else if(i==0) {
+                text_email.setError("Enter valid email");
+                text_email.requestFocus();
         } else if (text_password.getText().toString().length() <= 4) {
             text_password.setError("Enter valid password:min length 5");
             text_password.requestFocus();
-
         } else if (text_dob.getText().toString().isEmpty()) {
             text_dob.setError("Enter valid DOB");
             text_dob.requestFocus();

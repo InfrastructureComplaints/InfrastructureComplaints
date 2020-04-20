@@ -13,33 +13,37 @@
         android:text="@string/text_feedback_heading"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="@color/Blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.071" />
+        app:layout_constraintVertical_bias="0.27" />
 
     <EditText
         android:id="@+id/text_feedback"
-        android:layout_width="409dp"
-        android:layout_height="250dp"
+        android:layout_width="391dp"
+        android:layout_height="54dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_feedback_heading"
-        app:layout_constraintVertical_bias="0.122" />
+        app:layout_constraintVertical_bias="0.057" />
 
     <Button
         android:id="@+id/button_submit_f"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="153dp"
+        android:layout_height="49dp"
+        android:background="@color/Blue"
+        android:onClick="submitFeedback"
         android:text="@string/button_submit_f"
+        android:textColor="@color/White"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_feedback"
-        android:onClick="submitFeedback"/>
+        app:layout_constraintVertical_bias="0.097" />
 </androidx.constraintlayout.widget.ConstraintLayout>
